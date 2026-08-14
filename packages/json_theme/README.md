@@ -29,7 +29,7 @@ Because this library allows for icons to be dynamically referenced, Flutter cann
 
 # Live Example
 
-* [Web](https://peiffer-innovations.github.io/json_theme/web)
+* [Web](https://ciudad-valles-open-source.github.io/json_theme/web)
 
 
 # Decoding

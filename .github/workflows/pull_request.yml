@@ -14,19 +14,19 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Validate annotation
-        uses: peiffer-innovations/actions-flutter-validate@v2
+        uses: Ciudad-Valles-Open-Source/actions-flutter-validate@v2
         with:
           path: packages/annotation
           skip_sarif: true
 
       - name: Validate codegen
-        uses: peiffer-innovations/actions-flutter-validate@v2
+        uses: Ciudad-Valles-Open-Source/actions-flutter-validate@v2
         with:
           path: packages/codegen
           skip_sarif: true
 
       - name: Validate json_theme
-        uses: peiffer-innovations/actions-flutter-validate@v2
+        uses: Ciudad-Valles-Open-Source/actions-flutter-validate@v2
         with:
           generate_code: true
           path: packages/json_theme

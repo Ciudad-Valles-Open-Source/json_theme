@@ -3,7 +3,7 @@ name: Dependencies Updater
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * 2'
+    - cron: "0 1 * * 2"
 
 jobs:
   update_dependencies_annotation:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Dependencies
-        uses: peiffer-innovations/actions-dart-dependency-updater@v1
+        uses: Ciudad-Valles-Open-Source/actions-dart-dependency-updater@v1
         with:
           merge: true
           paths: packages/annotation
@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: Dependencies
-        uses: peiffer-innovations/actions-dart-dependency-updater@v1
+        uses: Ciudad-Valles-Open-Source/actions-dart-dependency-updater@v1
         with:
           merge: true
           paths: packages/codegen
@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: Dependencies
-        uses: peiffer-innovations/actions-dart-dependency-updater@v1
+        uses: Ciudad-Valles-Open-Source/actions-dart-dependency-updater@v1
         with:
           merge: true
           paths: packages/json_theme,json_theme/example

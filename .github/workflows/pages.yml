@@ -41,12 +41,12 @@ jobs:
         working-directory: packages/json_theme
 
       - name: Validate
-        uses: peiffer-innovations/actions-flutter-validate@v2
+        uses: Ciudad-Valles-Open-Source/actions-flutter-validate@v2
         with:
           path: packages/json_theme
 
       - name: Web
-        uses: peiffer-innovations/actions-flutter-deploy-pages@v1
+        uses: Ciudad-Valles-Open-Source/actions-flutter-deploy-pages@v1
         with:
           build_flags: --no-tree-shake-icons
           build_mode: release

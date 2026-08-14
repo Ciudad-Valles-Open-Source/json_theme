@@ -1,6 +1,6 @@
 name: "json_theme_annotation"
 description: "Simple package holding the annotations needed by the JsonTheme code generator."
-homepage: "https://github.com/peiffer-innovations/json_theme"
+homepage: "https://github.com/Ciudad-Valles-Open-Source/json_theme"
 version: "2.0.0+4"
 
 environment:

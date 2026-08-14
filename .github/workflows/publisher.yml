@@ -27,14 +27,14 @@ jobs:
         working-directory: packages/json_theme
 
       - name: Validate
-        uses: peiffer-innovations/actions-flutter-validate@v2
+        uses: Ciudad-Valles-Open-Source/actions-flutter-validate@v2
         with:
           path: packages/json_theme
 
       - name: Checkout Schemas
         uses: actions/checkout@v4
         with:
-          repository: peiffer-innovations/flutter_json_schemas
+          repository: Ciudad-Valles-Open-Source/flutter_json_schemas
           token: ${{ secrets.REPO_TOKEN }}
           fetch-depth: 0
           ref: gh-pages
@@ -56,12 +56,12 @@ jobs:
         working-directory: packages/json_theme
 
       - name: Publish
-        uses: peiffer-innovations/actions-pub-publish@v1.0.2
+        uses: Ciudad-Valles-Open-Source/actions-pub-publish@v1.0.2
         with:
           credentials: ${{ secrets.CREDENTIAL_JSON }}
           path: packages/json_theme
 
-      - uses: peiffer-innovations/actions-dart-version-autotag@v2
+      - uses: Ciudad-Valles-Open-Source/actions-dart-version-autotag@v2
         with:
           path: packages/json_theme
           token: ${{ secrets.REPO_TOKEN }}

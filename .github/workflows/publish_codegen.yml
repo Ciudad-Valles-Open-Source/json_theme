@@ -15,12 +15,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Validate
-        uses: peiffer-innovations/actions-flutter-validate@v2
+        uses: Ciudad-Valles-Open-Source/actions-flutter-validate@v2
         with:
           path: packages/codegen
 
       - name: Publish
-        uses: peiffer-innovations/actions-pub-publish@v1.0.2
+        uses: Ciudad-Valles-Open-Source/actions-pub-publish@v1.0.2
         with:
           credentials: ${{ secrets.CREDENTIAL_JSON }}
           path: packages/codegen
