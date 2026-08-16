@@ -1,3 +1,9 @@
+## [11.0.1] - August 14th, 2026
+
+* Fixed workspace packages linkages and dependency overrides to properly compile all projects together.
+* Refactored `meta` versions to prevent Flutter SDK pinning conflicts with `analyzer` package.
+* Regenerated codec code using `build_runner`.
+
 ## [11.0.0] - November 13th, 2025
 
 * Flutter 3.38
