@@ -93,7 +93,7 @@ final kDecoders = <String, ParameterDecoder>{
           ),
   'List<String>':
       (element, {required String? defaultValueCode, required String name}) =>
-          "value['$name'] ${defaultValueCode == null ? '' : ' ?? $defaultValueCode'}",
+          "(value['$name'] as List?)?.map((e) => e.toString()).toList() ${defaultValueCode == null ? '' : ' ?? $defaultValueCode'}",
   'Object': (element, {required String? defaultValueCode, required String name}) =>
       "value['$name'] ${defaultValueCode == null ? '' : ' ?? $defaultValueCode'}",
   'String': (element, {required String? defaultValueCode, required String name}) =>
