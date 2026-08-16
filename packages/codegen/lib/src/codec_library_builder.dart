@@ -706,7 +706,6 @@ class ${clazz}Schema {
     r'\$id': id,
     'type': 'object',
     'title': '$clazz',
-    'additionalProperties': false,
     'properties': {
       ${properties.join(',')},
     },
