@@ -10,13 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Dependencies
-        uses: Ciudad-Valles-Open-Source/actions-dart-dependency-updater@v1
-        with:
-          merge: true
-          paths: packages/annotation
-          pull_request: true
-          token: ${{ secrets.REPO_TOKEN }}
+      - name: Update Dependencies (packages/annotation)
+        run: |
+          dart pub global activate dart_dependency_updater
+          dart pub global run dart_dependency_updater:update --token ${{ secrets.REPO_TOKEN }} --message "actions-dart-dependency-updater: updating dependencies" --pull-request true --merge true --paths packages/annotation --repository ${{ github.repository }}
 
   update_dependencies_codegen:
     needs:
@@ -24,13 +21,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Dependencies
-        uses: Ciudad-Valles-Open-Source/actions-dart-dependency-updater@v1
-        with:
-          merge: true
-          paths: packages/codegen
-          pull_request: true
-          token: ${{ secrets.REPO_TOKEN }}
+      - name: Update Dependencies (packages/codegen)
+        run: |
+          dart pub global activate dart_dependency_updater
+          dart pub global run dart_dependency_updater:update --token ${{ secrets.REPO_TOKEN }} --message "actions-dart-dependency-updater: updating dependencies" --pull-request true --merge true --paths packages/codegen --repository ${{ github.repository }}
 
   update_dependencies:
     needs:
@@ -38,10 +32,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Dependencies
-        uses: Ciudad-Valles-Open-Source/actions-dart-dependency-updater@v1
-        with:
-          merge: true
-          paths: packages/json_theme,json_theme/example
-          pull_request: true
-          token: ${{ secrets.REPO_TOKEN }}
+      - name: Update Dependencies (packages/json_theme,json_theme/example)
+        run: |
+          dart pub global activate dart_dependency_updater
+          dart pub global run dart_dependency_updater:update --token ${{ secrets.REPO_TOKEN }} --message "actions-dart-dependency-updater: updating dependencies" --pull-request true --merge true --paths packages/json_theme,packages/json_theme/example --repository ${{ github.repository }}

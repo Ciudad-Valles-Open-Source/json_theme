@@ -27,8 +27,9 @@ jobs:
         working-directory: packages/json_theme
 
       - name: Validate
-        uses: Ciudad-Valles-Open-Source/actions-flutter-validate@v2
+        uses: ./.github/actions/flutter-validate
         with:
+          generate_code: true
           path: packages/json_theme
 
       - name: Checkout Schemas
@@ -56,12 +57,21 @@ jobs:
         working-directory: packages/json_theme
 
       - name: Publish
-        uses: Ciudad-Valles-Open-Source/actions-pub-publish@v1.0.2
+        uses: ./.github/actions/pub-publish
         with:
           credentials: ${{ secrets.CREDENTIAL_JSON }}
           path: packages/json_theme
 
-      - uses: Ciudad-Valles-Open-Source/actions-dart-version-autotag@v2
-        with:
-          path: packages/json_theme
-          token: ${{ secrets.REPO_TOKEN }}
+      - name: Auto Tag Version
+        run: |
+          VERSION=$(grep '^version: ' pubspec.yaml | cut -d ' ' -f 2 | tr -d '"\'')
+          TAG="v$VERSION"
+          if ! git ls-remote --tags origin | grep -q "refs/tags/$TAG"; then
+            git config --global user.email "noop@ciudad-valles-open-source.com"
+            git config --global user.name "action"
+            git tag -a "$TAG" -m "Release $TAG"
+            git push origin "$TAG"
+          else
+            echo "Tag $TAG already exists."
+          fi
+        working-directory: packages/json_theme

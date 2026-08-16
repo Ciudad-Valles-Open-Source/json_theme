@@ -1,0 +1,23 @@
+name: 'Publish Dart/Flutter package'
+description: 'Publish Dart/Flutter package natively'
+inputs:
+  credentials:
+    description: 'Credentials JSON to use'
+    required: true
+  path:
+    description: 'Package directory (default: ".")'
+    required: false
+    default: '.'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Publish
+      shell: bash
+      run: |
+        set +e
+        mkdir -p ~/.config/dart
+        set -e
+        printf '%s' "${{ inputs.credentials }}" > ~/.config/dart/pub-credentials.json
+        dart pub publish --force
+      working-directory: ${{ inputs.path }}

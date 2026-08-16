@@ -41,17 +41,19 @@ jobs:
         working-directory: packages/json_theme
 
       - name: Validate
-        uses: Ciudad-Valles-Open-Source/actions-flutter-validate@v2
+        uses: ./.github/actions/flutter-validate
         with:
           path: packages/json_theme
 
-      - name: Web
-        uses: Ciudad-Valles-Open-Source/actions-flutter-deploy-pages@v1
+      - name: Build Web
+        run: flutter build web --release --no-tree-shake-icons --base-href /flutter_json_schemas/
+        working-directory: packages/json_theme/example
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          build_flags: --no-tree-shake-icons
-          build_mode: release
-          build_number: ${{ needs.build_number.outputs.buildnumber }}
-          deploy_path: web
-          repo_url: https://github.com/${{ github.repository }}
-          source_path: packages/json_theme/example
-          token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.REPO_TOKEN }}
+          external_repository: Ciudad-Valles-Open-Source/flutter_json_schemas
+          publish_branch: gh-pages
+          publish_dir: packages/json_theme/example/build/web
+          keep_files: true
