@@ -1380,18 +1380,24 @@ class WidgetStatePropertyBoolSchema {
   static final schema = {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
-    'type': 'object',
-    'properties': {
-      'disabled': SchemaHelper.boolSchema,
-      'dragged': SchemaHelper.boolSchema,
-      'empty': SchemaHelper.boolSchema,
-      'error': SchemaHelper.boolSchema,
-      'focused': SchemaHelper.boolSchema,
-      'hovered': SchemaHelper.boolSchema,
-      'pressed': SchemaHelper.boolSchema,
-      'scrolledUnder': SchemaHelper.boolSchema,
-      'selected': SchemaHelper.boolSchema,
-    },
+    'anyOf': [
+      {'type': 'string'},
+      SchemaHelper.boolSchema,
+      {
+        'type': 'object',
+        'properties': {
+          'disabled': SchemaHelper.boolSchema,
+          'dragged': SchemaHelper.boolSchema,
+          'empty': SchemaHelper.boolSchema,
+          'error': SchemaHelper.boolSchema,
+          'focused': SchemaHelper.boolSchema,
+          'hovered': SchemaHelper.boolSchema,
+          'pressed': SchemaHelper.boolSchema,
+          'scrolledUnder': SchemaHelper.boolSchema,
+          'selected': SchemaHelper.boolSchema,
+        },
+      },
+    ],
   };
 }
 
@@ -1403,18 +1409,24 @@ class WidgetStatePropertyBorderSideSchema {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
     'title': 'WidgetStatePropertyBorderSide',
-    'type': 'object',
-    'properties': {
-      'disabled': SchemaHelper.objectSchema(BorderSideSchema.id),
-      'dragged': SchemaHelper.objectSchema(BorderSideSchema.id),
-      'empty': SchemaHelper.objectSchema(BorderSideSchema.id),
-      'error': SchemaHelper.objectSchema(BorderSideSchema.id),
-      'focused': SchemaHelper.objectSchema(BorderSideSchema.id),
-      'hovered': SchemaHelper.objectSchema(BorderSideSchema.id),
-      'pressed': SchemaHelper.objectSchema(BorderSideSchema.id),
-      'scrolledUnder': SchemaHelper.objectSchema(BorderSideSchema.id),
-      'selected': SchemaHelper.objectSchema(BorderSideSchema.id),
-    },
+    'anyOf': [
+      {'type': 'string'},
+      SchemaHelper.objectSchema(BorderSideSchema.id),
+      {
+        'type': 'object',
+        'properties': {
+          'disabled': SchemaHelper.objectSchema(BorderSideSchema.id),
+          'dragged': SchemaHelper.objectSchema(BorderSideSchema.id),
+          'empty': SchemaHelper.objectSchema(BorderSideSchema.id),
+          'error': SchemaHelper.objectSchema(BorderSideSchema.id),
+          'focused': SchemaHelper.objectSchema(BorderSideSchema.id),
+          'hovered': SchemaHelper.objectSchema(BorderSideSchema.id),
+          'pressed': SchemaHelper.objectSchema(BorderSideSchema.id),
+          'scrolledUnder': SchemaHelper.objectSchema(BorderSideSchema.id),
+          'selected': SchemaHelper.objectSchema(BorderSideSchema.id),
+        },
+      },
+    ],
   };
 }
 
@@ -1426,18 +1438,24 @@ class WidgetStatePropertyColorSchema {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
     'title': 'WidgetStatePropertyColor',
-    'type': 'object',
-    'properties': {
-      'disabled': SchemaHelper.objectSchema(ColorSchema.id),
-      'dragged': SchemaHelper.objectSchema(ColorSchema.id),
-      'empty': SchemaHelper.objectSchema(ColorSchema.id),
-      'error': SchemaHelper.objectSchema(ColorSchema.id),
-      'focused': SchemaHelper.objectSchema(ColorSchema.id),
-      'hovered': SchemaHelper.objectSchema(ColorSchema.id),
-      'pressed': SchemaHelper.objectSchema(ColorSchema.id),
-      'scrolledUnder': SchemaHelper.objectSchema(ColorSchema.id),
-      'selected': SchemaHelper.objectSchema(ColorSchema.id),
-    },
+    'anyOf': [
+      {'type': 'string'},
+      SchemaHelper.objectSchema(ColorSchema.id),
+      {
+        'type': 'object',
+        'properties': {
+          'disabled': SchemaHelper.objectSchema(ColorSchema.id),
+          'dragged': SchemaHelper.objectSchema(ColorSchema.id),
+          'empty': SchemaHelper.objectSchema(ColorSchema.id),
+          'error': SchemaHelper.objectSchema(ColorSchema.id),
+          'focused': SchemaHelper.objectSchema(ColorSchema.id),
+          'hovered': SchemaHelper.objectSchema(ColorSchema.id),
+          'pressed': SchemaHelper.objectSchema(ColorSchema.id),
+          'scrolledUnder': SchemaHelper.objectSchema(ColorSchema.id),
+          'selected': SchemaHelper.objectSchema(ColorSchema.id),
+        },
+      },
+    ],
   };
 }
 
@@ -1449,18 +1467,24 @@ class WidgetStatePropertyDoubleSchema {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
     'title': 'WidgetStatePropertyDouble',
-    'type': 'object',
-    'properties': {
-      'disabled': SchemaHelper.numberSchema,
-      'dragged': SchemaHelper.numberSchema,
-      'empty': SchemaHelper.numberSchema,
-      'error': SchemaHelper.numberSchema,
-      'focused': SchemaHelper.numberSchema,
-      'hovered': SchemaHelper.numberSchema,
-      'pressed': SchemaHelper.numberSchema,
-      'scrolledUnder': SchemaHelper.numberSchema,
-      'selected': SchemaHelper.numberSchema,
-    },
+    'anyOf': [
+      {'type': 'string'},
+      SchemaHelper.numberSchema,
+      {
+        'type': 'object',
+        'properties': {
+          'disabled': SchemaHelper.numberSchema,
+          'dragged': SchemaHelper.numberSchema,
+          'empty': SchemaHelper.numberSchema,
+          'error': SchemaHelper.numberSchema,
+          'focused': SchemaHelper.numberSchema,
+          'hovered': SchemaHelper.numberSchema,
+          'pressed': SchemaHelper.numberSchema,
+          'scrolledUnder': SchemaHelper.numberSchema,
+          'selected': SchemaHelper.numberSchema,
+        },
+      },
+    ],
   };
 }
 
@@ -1472,7 +1496,7 @@ class WidgetStatePropertyEdgeInsetsGeometrySchema {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
     'title': 'WidgetStatePropertyEdgeInsetsGeometry',
-    'oneOf': [
+    'anyOf': [
       {'type': 'string'},
       {'type': 'number'},
       {
@@ -1481,6 +1505,7 @@ class WidgetStatePropertyEdgeInsetsGeometrySchema {
           {'type': 'number'},
         ],
       },
+      SchemaHelper.objectSchema(EdgeInsetsGeometrySchema.id),
       {
         'type': 'object',
         'properties': {
@@ -1509,18 +1534,24 @@ class WidgetStatePropertyIconSchema {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
     'title': 'WidgetStatePropertyIcon',
-    'type': 'object',
-    'properties': {
-      'disabled': SchemaHelper.objectSchema(IconSchema.id),
-      'dragged': SchemaHelper.objectSchema(IconSchema.id),
-      'empty': SchemaHelper.objectSchema(IconSchema.id),
-      'error': SchemaHelper.objectSchema(IconSchema.id),
-      'focused': SchemaHelper.objectSchema(IconSchema.id),
-      'hovered': SchemaHelper.objectSchema(IconSchema.id),
-      'pressed': SchemaHelper.objectSchema(IconSchema.id),
-      'scrolledUnder': SchemaHelper.objectSchema(IconSchema.id),
-      'selected': SchemaHelper.objectSchema(IconSchema.id),
-    },
+    'anyOf': [
+      {'type': 'string'},
+      SchemaHelper.objectSchema(IconSchema.id),
+      {
+        'type': 'object',
+        'properties': {
+          'disabled': SchemaHelper.objectSchema(IconSchema.id),
+          'dragged': SchemaHelper.objectSchema(IconSchema.id),
+          'empty': SchemaHelper.objectSchema(IconSchema.id),
+          'error': SchemaHelper.objectSchema(IconSchema.id),
+          'focused': SchemaHelper.objectSchema(IconSchema.id),
+          'hovered': SchemaHelper.objectSchema(IconSchema.id),
+          'pressed': SchemaHelper.objectSchema(IconSchema.id),
+          'scrolledUnder': SchemaHelper.objectSchema(IconSchema.id),
+          'selected': SchemaHelper.objectSchema(IconSchema.id),
+        },
+      },
+    ],
   };
 }
 
@@ -1532,18 +1563,24 @@ class WidgetStatePropertyIconThemeDataSchema {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
     'title': 'WidgetStatePropertyIconThemeData',
-    'type': 'object',
-    'properties': {
-      'disabled': SchemaHelper.objectSchema(IconThemeDataSchema.id),
-      'dragged': SchemaHelper.objectSchema(IconThemeDataSchema.id),
-      'empty': SchemaHelper.objectSchema(IconThemeDataSchema.id),
-      'error': SchemaHelper.objectSchema(IconThemeDataSchema.id),
-      'focused': SchemaHelper.objectSchema(IconThemeDataSchema.id),
-      'hovered': SchemaHelper.objectSchema(IconThemeDataSchema.id),
-      'pressed': SchemaHelper.objectSchema(IconThemeDataSchema.id),
-      'scrolledUnder': SchemaHelper.objectSchema(IconThemeDataSchema.id),
-      'selected': SchemaHelper.objectSchema(IconThemeDataSchema.id),
-    },
+    'anyOf': [
+      {'type': 'string'},
+      SchemaHelper.objectSchema(IconThemeDataSchema.id),
+      {
+        'type': 'object',
+        'properties': {
+          'disabled': SchemaHelper.objectSchema(IconThemeDataSchema.id),
+          'dragged': SchemaHelper.objectSchema(IconThemeDataSchema.id),
+          'empty': SchemaHelper.objectSchema(IconThemeDataSchema.id),
+          'error': SchemaHelper.objectSchema(IconThemeDataSchema.id),
+          'focused': SchemaHelper.objectSchema(IconThemeDataSchema.id),
+          'hovered': SchemaHelper.objectSchema(IconThemeDataSchema.id),
+          'pressed': SchemaHelper.objectSchema(IconThemeDataSchema.id),
+          'scrolledUnder': SchemaHelper.objectSchema(IconThemeDataSchema.id),
+          'selected': SchemaHelper.objectSchema(IconThemeDataSchema.id),
+        },
+      },
+    ],
   };
 }
 
@@ -1555,18 +1592,24 @@ class WidgetStatePropertyMouseCursorSchema {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
     'title': 'WidgetStatePropertyMouseCursorSchema',
-    'type': 'object',
-    'properties': {
-      'disabled': SchemaHelper.objectSchema(MouseCursorSchema.id),
-      'dragged': SchemaHelper.objectSchema(MouseCursorSchema.id),
-      'empty': SchemaHelper.objectSchema(MouseCursorSchema.id),
-      'error': SchemaHelper.objectSchema(MouseCursorSchema.id),
-      'focused': SchemaHelper.objectSchema(MouseCursorSchema.id),
-      'hovered': SchemaHelper.objectSchema(MouseCursorSchema.id),
-      'pressed': SchemaHelper.objectSchema(MouseCursorSchema.id),
-      'scrolledUnder': SchemaHelper.objectSchema(MouseCursorSchema.id),
-      'selected': SchemaHelper.objectSchema(MouseCursorSchema.id),
-    },
+    'anyOf': [
+      {'type': 'string'},
+      SchemaHelper.objectSchema(MouseCursorSchema.id),
+      {
+        'type': 'object',
+        'properties': {
+          'disabled': SchemaHelper.objectSchema(MouseCursorSchema.id),
+          'dragged': SchemaHelper.objectSchema(MouseCursorSchema.id),
+          'empty': SchemaHelper.objectSchema(MouseCursorSchema.id),
+          'error': SchemaHelper.objectSchema(MouseCursorSchema.id),
+          'focused': SchemaHelper.objectSchema(MouseCursorSchema.id),
+          'hovered': SchemaHelper.objectSchema(MouseCursorSchema.id),
+          'pressed': SchemaHelper.objectSchema(MouseCursorSchema.id),
+          'scrolledUnder': SchemaHelper.objectSchema(MouseCursorSchema.id),
+          'selected': SchemaHelper.objectSchema(MouseCursorSchema.id),
+        },
+      },
+    ],
   };
 }
 
@@ -1578,18 +1621,24 @@ class WidgetStatePropertyOutlinedBorderSchema {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
     'title': 'WidgetStatePropertyOutlinedBorder',
-    'type': 'object',
-    'properties': {
-      'disabled': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
-      'dragged': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
-      'empty': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
-      'error': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
-      'focused': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
-      'hovered': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
-      'pressed': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
-      'scrolledUnder': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
-      'selected': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
-    },
+    'anyOf': [
+      {'type': 'string'},
+      SchemaHelper.objectSchema(OutlinedBorderSchema.id),
+      {
+        'type': 'object',
+        'properties': {
+          'disabled': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
+          'dragged': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
+          'empty': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
+          'error': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
+          'focused': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
+          'hovered': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
+          'pressed': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
+          'scrolledUnder': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
+          'selected': SchemaHelper.objectSchema(OutlinedBorderSchema.id),
+        },
+      },
+    ],
   };
 }
 
@@ -1601,18 +1650,24 @@ class WidgetStatePropertySizeSchema {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
     'title': 'WidgetStatePropertySize',
-    'type': 'object',
-    'properties': {
-      'disabled': SchemaHelper.objectSchema(SizeSchema.id),
-      'dragged': SchemaHelper.objectSchema(SizeSchema.id),
-      'empty': SchemaHelper.objectSchema(SizeSchema.id),
-      'error': SchemaHelper.objectSchema(SizeSchema.id),
-      'focused': SchemaHelper.objectSchema(SizeSchema.id),
-      'hovered': SchemaHelper.objectSchema(SizeSchema.id),
-      'pressed': SchemaHelper.objectSchema(SizeSchema.id),
-      'scrolledUnder': SchemaHelper.objectSchema(SizeSchema.id),
-      'selected': SchemaHelper.objectSchema(SizeSchema.id),
-    },
+    'anyOf': [
+      {'type': 'string'},
+      SchemaHelper.objectSchema(SizeSchema.id),
+      {
+        'type': 'object',
+        'properties': {
+          'disabled': SchemaHelper.objectSchema(SizeSchema.id),
+          'dragged': SchemaHelper.objectSchema(SizeSchema.id),
+          'empty': SchemaHelper.objectSchema(SizeSchema.id),
+          'error': SchemaHelper.objectSchema(SizeSchema.id),
+          'focused': SchemaHelper.objectSchema(SizeSchema.id),
+          'hovered': SchemaHelper.objectSchema(SizeSchema.id),
+          'pressed': SchemaHelper.objectSchema(SizeSchema.id),
+          'scrolledUnder': SchemaHelper.objectSchema(SizeSchema.id),
+          'selected': SchemaHelper.objectSchema(SizeSchema.id),
+        },
+      },
+    ],
   };
 }
 
@@ -1624,18 +1679,24 @@ class WidgetStatePropertyTextStyleSchema {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
     'title': 'WidgetStatePropertyTextStyle',
-    'type': 'object',
-    'properties': {
-      'disabled': SchemaHelper.objectSchema(TextStyleSchema.id),
-      'dragged': SchemaHelper.objectSchema(TextStyleSchema.id),
-      'empty': SchemaHelper.objectSchema(TextStyleSchema.id),
-      'error': SchemaHelper.objectSchema(TextStyleSchema.id),
-      'focused': SchemaHelper.objectSchema(TextStyleSchema.id),
-      'hovered': SchemaHelper.objectSchema(TextStyleSchema.id),
-      'pressed': SchemaHelper.objectSchema(TextStyleSchema.id),
-      'scrolledUnder': SchemaHelper.objectSchema(TextStyleSchema.id),
-      'selected': SchemaHelper.objectSchema(TextStyleSchema.id),
-    },
+    'anyOf': [
+      {'type': 'string'},
+      SchemaHelper.objectSchema(TextStyleSchema.id),
+      {
+        'type': 'object',
+        'properties': {
+          'disabled': SchemaHelper.objectSchema(TextStyleSchema.id),
+          'dragged': SchemaHelper.objectSchema(TextStyleSchema.id),
+          'empty': SchemaHelper.objectSchema(TextStyleSchema.id),
+          'error': SchemaHelper.objectSchema(TextStyleSchema.id),
+          'focused': SchemaHelper.objectSchema(TextStyleSchema.id),
+          'hovered': SchemaHelper.objectSchema(TextStyleSchema.id),
+          'pressed': SchemaHelper.objectSchema(TextStyleSchema.id),
+          'scrolledUnder': SchemaHelper.objectSchema(TextStyleSchema.id),
+          'selected': SchemaHelper.objectSchema(TextStyleSchema.id),
+        },
+      },
+    ],
   };
 }
 
