@@ -7973,7 +7973,6 @@ class ActionIconThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ActionIconThemeData',
-    'additionalProperties': false,
     'properties': {
       'backButtonIconBuilder': SchemaHelper.stringSchema,
       'closeButtonIconBuilder': SchemaHelper.stringSchema,
@@ -8041,7 +8040,6 @@ class AppBarThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'AppBarThemeData',
-    'additionalProperties': false,
     'properties': {
       'actionsIconTheme': SchemaHelper.objectSchema(IconThemeDataSchema.id),
       'actionsPadding': SchemaHelper.objectSchema(EdgeInsetsGeometrySchema.id),
@@ -8107,7 +8105,6 @@ class BadgeThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'BadgeThemeData',
-    'additionalProperties': false,
     'properties': {
       'alignment': SchemaHelper.objectSchema(AlignmentGeometrySchema.id),
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
@@ -8186,7 +8183,6 @@ class BorderSideSchema {
     r'$id': id,
     'type': 'object',
     'title': 'BorderSide',
-    'additionalProperties': false,
     'properties': {
       'color': SchemaHelper.objectSchema(ColorSchema.id),
       'strokeAlign': SchemaHelper.numberSchema,
@@ -8218,7 +8214,6 @@ class BottomAppBarThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'BottomAppBarThemeData',
-    'additionalProperties': false,
     'properties': {
       'color': SchemaHelper.objectSchema(ColorSchema.id),
       'elevation': SchemaHelper.numberSchema,
@@ -8253,7 +8248,6 @@ class BottomNavigationBarThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'BottomNavigationBarThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'elevation': SchemaHelper.numberSchema,
@@ -8299,7 +8293,6 @@ class BottomSheetThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'BottomSheetThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'clipBehavior': SchemaHelper.objectSchema(ClipSchema.id),
@@ -8327,7 +8320,6 @@ class BoxConstraintsSchema {
     r'$id': id,
     'type': 'object',
     'title': 'BoxConstraints',
-    'additionalProperties': false,
     'properties': {
       'maxHeight': SchemaHelper.numberSchema,
       'maxWidth': SchemaHelper.numberSchema,
@@ -8346,7 +8338,6 @@ class BoxDecorationSchema {
     r'$id': id,
     'type': 'object',
     'title': 'BoxDecoration',
-    'additionalProperties': false,
     'properties': {
       'backgroundBlendMode': SchemaHelper.objectSchema(BlendModeSchema.id),
       'border': SchemaHelper.objectSchema(BoxBorderSchema.id),
@@ -8410,7 +8401,6 @@ class BoxShadowSchema {
     r'$id': id,
     'type': 'object',
     'title': 'BoxShadow',
-    'additionalProperties': false,
     'properties': {
       'blurRadius': SchemaHelper.numberSchema,
       'blurStyle': SchemaHelper.objectSchema(BlurStyleSchema.id),
@@ -8482,7 +8472,6 @@ class ButtonStyleSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ButtonStyle',
-    'additionalProperties': false,
     'properties': {
       'alignment': SchemaHelper.objectSchema(AlignmentGeometrySchema.id),
       'animationDuration': SchemaHelper.numberSchema,
@@ -8563,7 +8552,6 @@ class ButtonThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ButtonThemeData',
-    'additionalProperties': false,
     'properties': {
       'alignedDropdown': SchemaHelper.boolSchema,
       'buttonColor': SchemaHelper.objectSchema(ColorSchema.id),
@@ -8597,7 +8585,6 @@ class CardThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'CardThemeData',
-    'additionalProperties': false,
     'properties': {
       'clipBehavior': SchemaHelper.objectSchema(ClipSchema.id),
       'color': SchemaHelper.objectSchema(ColorSchema.id),
@@ -8619,7 +8606,6 @@ class CarouselViewThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'CarouselViewThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'elevation': SchemaHelper.numberSchema,
@@ -8642,7 +8628,6 @@ class CheckboxThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'CheckboxThemeData',
-    'additionalProperties': false,
     'properties': {
       'checkColor': SchemaHelper.objectSchema(
         WidgetStatePropertyColorSchema.id,
@@ -8674,7 +8659,6 @@ class ChipThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ChipThemeData',
-    'additionalProperties': false,
     'properties': {
       'avatarBoxConstraints': SchemaHelper.objectSchema(
         BoxConstraintsSchema.id,
@@ -8734,7 +8718,6 @@ class ColorSchemeSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ColorScheme',
-    'additionalProperties': false,
     'properties': {
       'brightness': SchemaHelper.objectSchema(BrightnessSchema.id),
       'error': SchemaHelper.objectSchema(ColorSchema.id),
@@ -8828,7 +8811,6 @@ class CupertinoTextThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'CupertinoTextThemeData',
-    'additionalProperties': false,
     'properties': {
       'actionSmallTextStyle': SchemaHelper.objectSchema(TextStyleSchema.id),
       'actionTextStyle': SchemaHelper.objectSchema(TextStyleSchema.id),
@@ -8853,7 +8835,6 @@ class CupertinoThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'CupertinoThemeData',
-    'additionalProperties': false,
     'properties': {
       'applyThemeToAll': SchemaHelper.boolSchema,
       'barBackgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
@@ -8876,7 +8857,6 @@ class DataTableThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'DataTableThemeData',
-    'additionalProperties': false,
     'properties': {
       'checkboxHorizontalMargin': SchemaHelper.numberSchema,
       'columnSpacing': SchemaHelper.numberSchema,
@@ -8916,7 +8896,6 @@ class DatePickerThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'DatePickerThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'cancelButtonStyle': SchemaHelper.objectSchema(ButtonStyleSchema.id),
@@ -9006,7 +8985,6 @@ class DecorationImageSchema {
     r'$id': id,
     'type': 'object',
     'title': 'DecorationImage',
-    'additionalProperties': false,
     'properties': {
       'alignment': SchemaHelper.objectSchema(AlignmentGeometrySchema.id),
       'centerSlice': SchemaHelper.objectSchema(RectSchema.id),
@@ -9047,7 +9025,6 @@ class DialogThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'DialogThemeData',
-    'additionalProperties': false,
     'properties': {
       'actionsPadding': SchemaHelper.objectSchema(EdgeInsetsGeometrySchema.id),
       'alignment': SchemaHelper.objectSchema(AlignmentGeometrySchema.id),
@@ -9097,7 +9074,6 @@ class DividerThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'DividerThemeData',
-    'additionalProperties': false,
     'properties': {
       'color': SchemaHelper.objectSchema(ColorSchema.id),
       'endIndent': SchemaHelper.numberSchema,
@@ -9131,7 +9107,6 @@ class DrawerThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'DrawerThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'clipBehavior': SchemaHelper.objectSchema(ClipSchema.id),
@@ -9155,7 +9130,6 @@ class DropdownMenuThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'DropdownMenuThemeData',
-    'additionalProperties': false,
     'properties': {
       'disabledColor': SchemaHelper.objectSchema(ColorSchema.id),
       'inputDecorationTheme': SchemaHelper.objectSchema(
@@ -9176,7 +9150,6 @@ class ElevatedButtonThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ElevatedButtonThemeData',
-    'additionalProperties': false,
     'properties': {'style': SchemaHelper.objectSchema(ButtonStyleSchema.id)},
   };
 }
@@ -9190,7 +9163,6 @@ class ExpansionTileThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ExpansionTileThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'childrenPadding': SchemaHelper.objectSchema(EdgeInsetsGeometrySchema.id),
@@ -9222,7 +9194,6 @@ class FilledButtonThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'FilledButtonThemeData',
-    'additionalProperties': false,
     'properties': {'style': SchemaHelper.objectSchema(ButtonStyleSchema.id)},
   };
 }
@@ -9308,7 +9279,6 @@ class FloatingActionButtonThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'FloatingActionButtonThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'disabledElevation': SchemaHelper.numberSchema,
@@ -9442,7 +9412,6 @@ class IconButtonThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'IconButtonThemeData',
-    'additionalProperties': false,
     'properties': {'style': SchemaHelper.objectSchema(ButtonStyleSchema.id)},
   };
 }
@@ -9456,7 +9425,6 @@ class IconThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'IconThemeData',
-    'additionalProperties': false,
     'properties': {
       'applyTextScaling': SchemaHelper.boolSchema,
       'color': SchemaHelper.objectSchema(ColorSchema.id),
@@ -9498,7 +9466,6 @@ class InputDecorationThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'InputDecorationThemeData',
-    'additionalProperties': false,
     'properties': {
       'activeIndicatorBorder': SchemaHelper.objectSchema(BorderSideSchema.id),
       'alignLabelWithHint': SchemaHelper.boolSchema,
@@ -9584,7 +9551,6 @@ class ListTileThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ListTileThemeData',
-    'additionalProperties': false,
     'properties': {
       'contentPadding': SchemaHelper.objectSchema(EdgeInsetsGeometrySchema.id),
       'controlAffinity': SchemaHelper.objectSchema(
@@ -9681,7 +9647,6 @@ class MaterialBannerThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'MaterialBannerThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'contentTextStyle': SchemaHelper.objectSchema(TextStyleSchema.id),
@@ -9753,7 +9718,6 @@ class MenuBarThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'MenuBarThemeData',
-    'additionalProperties': false,
     'properties': {'style': SchemaHelper.objectSchema(MenuStyleSchema.id)},
   };
 }
@@ -9767,7 +9731,6 @@ class MenuButtonThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'MenuButtonThemeData',
-    'additionalProperties': false,
     'properties': {'style': SchemaHelper.objectSchema(ButtonStyleSchema.id)},
   };
 }
@@ -9781,7 +9744,6 @@ class MenuStyleSchema {
     r'$id': id,
     'type': 'object',
     'title': 'MenuStyle',
-    'additionalProperties': false,
     'properties': {
       'alignment': SchemaHelper.objectSchema(AlignmentGeometrySchema.id),
       'backgroundColor': SchemaHelper.objectSchema(
@@ -9827,7 +9789,6 @@ class MenuThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'MenuThemeData',
-    'additionalProperties': false,
     'properties': {
       'style': SchemaHelper.objectSchema(MenuStyleSchema.id),
       'submenuIcon': SchemaHelper.objectSchema(
@@ -9846,7 +9807,6 @@ class NavigationBarThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'NavigationBarThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'elevation': SchemaHelper.numberSchema,
@@ -9898,7 +9858,6 @@ class NavigationDrawerThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'NavigationDrawerThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'elevation': SchemaHelper.numberSchema,
@@ -9940,7 +9899,6 @@ class NavigationRailThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'NavigationRailThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'elevation': SchemaHelper.numberSchema,
@@ -9968,7 +9926,6 @@ class OutlinedButtonThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'OutlinedButtonThemeData',
-    'additionalProperties': false,
     'properties': {'style': SchemaHelper.objectSchema(ButtonStyleSchema.id)},
   };
 }
@@ -10046,7 +10003,6 @@ class PopupMenuThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'PopupMenuThemeData',
-    'additionalProperties': false,
     'properties': {
       'color': SchemaHelper.objectSchema(ColorSchema.id),
       'elevation': SchemaHelper.numberSchema,
@@ -10078,7 +10034,6 @@ class ProgressIndicatorThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ProgressIndicatorThemeData',
-    'additionalProperties': false,
     'properties': {
       'borderRadius': SchemaHelper.objectSchema(BorderRadiusGeometrySchema.id),
       'circularTrackColor': SchemaHelper.objectSchema(ColorSchema.id),
@@ -10110,7 +10065,6 @@ class RadioThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'RadioThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(
         WidgetStatePropertyColorSchema.id,
@@ -10157,7 +10111,6 @@ class ScrollbarThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ScrollbarThemeData',
-    'additionalProperties': false,
     'properties': {
       'crossAxisMargin': SchemaHelper.numberSchema,
       'interactive': SchemaHelper.boolSchema,
@@ -10208,7 +10161,6 @@ class SearchBarThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'SearchBarThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(
         WidgetStatePropertyColorSchema.id,
@@ -10255,7 +10207,6 @@ class SearchViewThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'SearchViewThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'barPadding': SchemaHelper.objectSchema(EdgeInsetsGeometrySchema.id),
@@ -10283,7 +10234,6 @@ class SegmentedButtonThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'SegmentedButtonThemeData',
-    'additionalProperties': false,
     'properties': {
       'selectedIcon': SchemaHelper.objectSchema(WidgetSchema.id),
       'style': SchemaHelper.objectSchema(ButtonStyleSchema.id),
@@ -10300,7 +10250,6 @@ class ShadowSchema {
     r'$id': id,
     'type': 'object',
     'title': 'Shadow',
-    'additionalProperties': false,
     'properties': {
       'blurRadius': SchemaHelper.numberSchema,
       'color': SchemaHelper.objectSchema(ColorSchema.id),
@@ -10369,7 +10318,6 @@ class SliderThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'SliderThemeData',
-    'additionalProperties': false,
     'properties': {
       'activeTickMarkColor': SchemaHelper.objectSchema(ColorSchema.id),
       'activeTrackColor': SchemaHelper.objectSchema(ColorSchema.id),
@@ -10491,7 +10439,6 @@ class SnackBarThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'SnackBarThemeData',
-    'additionalProperties': false,
     'properties': {
       'actionBackgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'actionOverflowThreshold': SchemaHelper.numberSchema,
@@ -10549,7 +10496,6 @@ class StrutStyleSchema {
     r'$id': id,
     'type': 'object',
     'title': 'StrutStyle',
-    'additionalProperties': false,
     'properties': {
       'debugLabel': SchemaHelper.stringSchema,
       'fontFamily': SchemaHelper.stringSchema,
@@ -10585,7 +10531,6 @@ class SwitchThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'SwitchThemeData',
-    'additionalProperties': false,
     'properties': {
       'materialTapTargetSize': SchemaHelper.objectSchema(
         MaterialTapTargetSizeSchema.id,
@@ -10655,7 +10600,6 @@ class TabBarThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'TabBarThemeData',
-    'additionalProperties': false,
     'properties': {
       'dividerColor': SchemaHelper.objectSchema(ColorSchema.id),
       'dividerHeight': SchemaHelper.numberSchema,
@@ -10708,7 +10652,6 @@ class TableBorderSchema {
     r'$id': id,
     'type': 'object',
     'title': 'TableBorder',
-    'additionalProperties': false,
     'properties': {
       'borderRadius': SchemaHelper.objectSchema(BorderRadiusSchema.id),
       'bottom': SchemaHelper.objectSchema(BorderSideSchema.id),
@@ -10864,7 +10807,6 @@ class TextHeightBehaviorSchema {
     r'$id': id,
     'type': 'object',
     'title': 'TextHeightBehavior',
-    'additionalProperties': false,
     'properties': {
       'applyHeightToFirstAscent': SchemaHelper.boolSchema,
       'applyHeightToLastDescent': SchemaHelper.boolSchema,
@@ -10977,7 +10919,6 @@ class TextSelectionThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'TextSelectionThemeData',
-    'additionalProperties': false,
     'properties': {
       'cursorColor': SchemaHelper.objectSchema(ColorSchema.id),
       'selectionColor': SchemaHelper.objectSchema(ColorSchema.id),
@@ -10995,7 +10936,6 @@ class TextSpanSchema {
     r'$id': id,
     'type': 'object',
     'title': 'TextSpan',
-    'additionalProperties': false,
     'properties': {
       'children': SchemaHelper.arraySchema(InlineSpanSchema.id),
       'locale': SchemaHelper.objectSchema(LocaleSchema.id),
@@ -11021,7 +10961,6 @@ class TextStyleSchema {
     r'$id': id,
     'type': 'object',
     'title': 'TextStyle',
-    'additionalProperties': false,
     'properties': {
       'background': SchemaHelper.stringSchema,
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
@@ -11074,7 +11013,6 @@ class TextThemeSchema {
     r'$id': id,
     'type': 'object',
     'title': 'TextTheme',
-    'additionalProperties': false,
     'properties': {
       'bodyLarge': SchemaHelper.objectSchema(TextStyleSchema.id),
       'bodyMedium': SchemaHelper.objectSchema(TextStyleSchema.id),
@@ -11117,7 +11055,6 @@ class ThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ThemeData',
-    'additionalProperties': false,
     'properties': {
       'actionIconTheme': SchemaHelper.objectSchema(
         ActionIconThemeDataSchema.id,
@@ -11300,7 +11237,6 @@ class TimePickerThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'TimePickerThemeData',
-    'additionalProperties': false,
     'properties': {
       'backgroundColor': SchemaHelper.objectSchema(ColorSchema.id),
       'cancelButtonStyle': SchemaHelper.objectSchema(ButtonStyleSchema.id),
@@ -11345,7 +11281,6 @@ class ToggleButtonsThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'ToggleButtonsThemeData',
-    'additionalProperties': false,
     'properties': {
       'borderColor': SchemaHelper.objectSchema(ColorSchema.id),
       'borderRadius': SchemaHelper.objectSchema(BorderRadiusSchema.id),
@@ -11375,7 +11310,6 @@ class TooltipThemeDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'TooltipThemeData',
-    'additionalProperties': false,
     'properties': {
       'constraints': SchemaHelper.objectSchema(BoxConstraintsSchema.id),
       'decoration': SchemaHelper.objectSchema(DecorationSchema.id),
@@ -11417,7 +11351,6 @@ class TypographySchema {
     r'$id': id,
     'type': 'object',
     'title': 'Typography',
-    'additionalProperties': false,
     'properties': {
       'black': SchemaHelper.objectSchema(TextThemeSchema.id),
       'dense': SchemaHelper.objectSchema(TextThemeSchema.id),

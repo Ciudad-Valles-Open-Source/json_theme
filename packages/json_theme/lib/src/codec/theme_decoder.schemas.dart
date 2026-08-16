@@ -274,12 +274,12 @@ class BoxBorderSchema {
   static final schema = {
     r'$schema': 'http://json-schema.org/draft-07/schema#',
     r'$id': id,
-    'oneOf': [
+    'anyOf': [
       SchemaHelper.objectSchema(BorderSideSchema.id),
       {
         'type': 'object',
         'title': 'BoxBorder',
-        'additionalProperties': false,
+
         'properties': {
           'bottom': SchemaHelper.objectSchema(BorderSideSchema.id),
           'left': SchemaHelper.objectSchema(BorderSideSchema.id),
@@ -441,7 +441,7 @@ class FontFeatureSchema {
     r'$id': id,
     'type': 'object',
     'title': 'FontFeature',
-    'additionalProperties': false,
+
     'properties': {
       'feature': SchemaHelper.stringSchema,
       'value': SchemaHelper.numberSchema,
@@ -458,7 +458,7 @@ class FontVariationSchema {
     r'$id': id,
     'type': 'object',
     'title': 'FontVariation',
-    'additionalProperties': false,
+
     'properties': {
       'axis': SchemaHelper.stringSchema,
       'value': SchemaHelper.numberSchema,
@@ -552,7 +552,7 @@ class IconSchema {
     r'$id': id,
     'type': 'object',
     'title': 'Icon',
-    'additionalProperties': false,
+
     'required': ['icon'],
     'properties': {
       'applyTextScaling': SchemaHelper.boolSchema,
@@ -580,7 +580,7 @@ class IconDataSchema {
     r'$id': id,
     'type': 'object',
     'title': 'IconData',
-    'additionalProperties': false,
+
     'properties': {
       'codePoint': SchemaHelper.numberSchema,
       'fontFamily': SchemaHelper.stringSchema,
@@ -605,7 +605,7 @@ class ImageProviderSchema {
         'https://api.flutter.dev/flutter/painting/ImageProvider-class.html',
     'title': 'ImageProvider',
     'type': 'object',
-    'additionalProperties': false,
+
     'required': ['type'],
     'properties': {
       'assetName': SchemaHelper.stringSchema,
@@ -684,7 +684,7 @@ class LocaleSchema {
     r'$id': id,
     'type': 'object',
     'title': 'Locale',
-    'additionalProperties': false,
+
     'properties': {
       'countryCode': SchemaHelper.stringSchema,
       'languageCode': SchemaHelper.stringSchema,
@@ -831,7 +831,7 @@ class OffsetSchema {
     r'$id': id,
     'type': 'object',
     'title': 'Offset',
-    'additionalProperties': false,
+
     'properties': {
       'dx': SchemaHelper.numberSchema,
       'dy': SchemaHelper.numberSchema,
@@ -848,7 +848,7 @@ class OrdinalSortKeySchema {
     r'$id': id,
     'type': 'object',
     'title': 'OrdinalSortKey',
-    'additionalProperties': false,
+
     'properties': {
       'name': SchemaHelper.stringSchema,
       'order': SchemaHelper.numberSchema,
@@ -925,7 +925,7 @@ class RadiusSchema {
       SchemaHelper.numberSchema,
       {
         'type': 'object',
-        'additionalProperties': false,
+
         'required': ['radius', 'type'],
         'properties': {
           'radius': SchemaHelper.numberSchema,
@@ -937,7 +937,7 @@ class RadiusSchema {
       },
       {
         'type': 'object',
-        'additionalProperties': false,
+
         'required': ['x', 'y', 'type'],
         'properties': {
           'x': SchemaHelper.numberSchema,
@@ -950,7 +950,7 @@ class RadiusSchema {
       },
       {
         'type': 'object',
-        'additionalProperties': false,
+
         'required': ['type'],
         'properties': {
           'type': {
@@ -1069,7 +1069,7 @@ class RectSchema {
         'properties': {
           'center': {
             'type': 'object',
-            'additionalProperties': false,
+
             'required': ['dx', 'dy'],
             'properties': {
               'dx': SchemaHelper.numberSchema,
@@ -1122,7 +1122,7 @@ class RectSchema {
         'properties': {
           'a': {
             'type': 'object',
-            'additionalProperties': false,
+
             'required': ['dx', 'dy'],
             'properties': {
               'dx': SchemaHelper.numberSchema,
@@ -1131,7 +1131,7 @@ class RectSchema {
           },
           'b': {
             'type': 'object',
-            'additionalProperties': false,
+
             'required': ['dx', 'dy'],
             'properties': {
               'dx': SchemaHelper.numberSchema,
@@ -1206,7 +1206,7 @@ class SemanticsTagSchema {
     r'$id': id,
     'type': 'object',
     'title': 'SemanticsTag',
-    'additionalProperties': false,
+
     'properties': {'name': SchemaHelper.stringSchema},
   };
 }
@@ -1240,7 +1240,7 @@ class SizeSchema {
     r'$id': id,
     'type': 'object',
     'title': 'Size',
-    'additionalProperties': false,
+
     'properties': {
       'height': SchemaHelper.numberSchema,
       'width': SchemaHelper.numberSchema,
@@ -1309,7 +1309,7 @@ class TableColumnWidthSchema {
     r'$id': id,
     'type': 'object',
     'title': 'TableColumnWidth',
-    'additionalProperties': false,
+
     'required': ['type'],
     'properties': {
       'a': SchemaHelper.objectSchema(TableColumnWidthSchema.id),
@@ -1333,7 +1333,7 @@ class TextButtonThemeDataSchema {
     r'$comment':
         'https://api.flutter.dev/flutter/material/TextButtonThemeData-class.html',
     'title': 'TextButtonThemeData',
-    'additionalProperties': false,
+
     'properties': {'style': SchemaHelper.objectSchema(ButtonStyleSchema.id)},
   };
 }
