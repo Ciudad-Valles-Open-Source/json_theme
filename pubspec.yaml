@@ -9,3 +9,6 @@ workspace:
   - packages/codegen
   - packages/json_theme
   - packages/json_theme/example
+
+dependency_overrides:
+  meta: "1.18.3"
